@@ -103,7 +103,11 @@ enum stm32_chipids {
     STM32_CHIPID_F0               = 0x440,
     STM32_CHIPID_F412             = 0x441,
     STM32_CHIPID_F09x             = 0x442,
-    STM32_CHIPID_C011xx           = 0x443, /* RM0490 (revision 3), section 26.10.1 "DBG device ID code register (DBG_IDCODE)" */
+    STM32_CHIPID_C011xx           = 0x443, /* RM0490 (revision 5), section 30.10.1 "DBG device ID code register (DBG_IDCODE)" */
+    STM32_CHIPID_C031xx           = 0x453, /* RM0490 (revision 5), section 30.10.1 "DBG device ID code register (DBG_IDCODE)" */
+    STM32_CHIPID_C051xx           = 0x44C, /* RM0490 (revision 5), section 30.10.1 "DBG device ID code register (DBG_IDCODE)" */
+    STM32_CHIPID_C071xx           = 0x493, /* RM0490 (revision 5), section 30.10.1 "DBG device ID code register (DBG_IDCODE)" */
+    STM32_CHIPID_C091xx_C92xx     = 0x44D, /* RM0490 (revision 5), section 30.10.1 "DBG device ID code register (DBG_IDCODE)" */
     STM32_CHIPID_F0xx_SMALL       = 0x444,
     STM32_CHIPID_F04              = 0x445,
     STM32_CHIPID_F303_HD          = 0x446, /* high density */
@@ -113,7 +117,6 @@ enum stm32_chipids {
     STM32_CHIPID_H74xxx           = 0x450, /* RM0433, p.3189 */
     STM32_CHIPID_F76xxx           = 0x451,
     STM32_CHIPID_F72xxx           = 0x452, /* Nucleo F722ZE board */
-    STM32_CHIPID_C031xx           = 0x453, /* RM0490 (revision 3), section 26.10.1 "DBG device ID code register (DBG_IDCODE)" */
     STM32_CHIPID_U535_U545        = 0x455, /* RM0456, p.3604 */
     STM32_CHIPID_G0_CAT4          = 0x456, /* G051/G061 */
     STM32_CHIPID_L0_CAT1          = 0x457,
@@ -197,8 +200,8 @@ enum stm32_chipids {
 #define STM32WB_DBGMCU_APB1FZR1_WWDG_STOP 11
 #define STM32WB_DBGMCU_APB1FZR1_IWDG_STOP 12
 
-#define STM32C0_RCC_AHBENR 0x40021038         // RM0490 (revision 3), section 5.4.25 "RCC register map"
-#define STM32C0_RCC_DMAEN 0x00000001 // DMAEN // RM0490 (revision 3), section 5.4.25 "RCC register map"
+#define STM32C0_RCC_AHBENR 0x40021038         // RM0490 (revision 5), section 6.4.24 "RCC register map"
+#define STM32C0_RCC_DMAEN 0x00000001 // DMAEN // RM0490 (revision 5), section 6.4.24 "RCC register map"
 
 #define STM32F1_RCC_AHBENR 0x40021014
 #define STM32F1_RCC_DMAEN 0x00000003 // DMA2EN | DMA1EN
